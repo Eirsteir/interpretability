@@ -405,8 +405,9 @@ def plot_norms(norms, labels, title):
 # will be downloaded as <dataset_name>.json
 # field_name must be a field within the csv.
 all_data = [
-    ('music_new', 'query'),
+    # ('music_new', 'query'),
     ('dialog', 'col1'),
+  ("curriculum_dialogues", "content")
   ]
 
 data = {}

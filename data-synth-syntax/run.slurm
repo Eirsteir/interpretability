@@ -26,4 +26,4 @@ pip install -r requirements.txt
 
 echo "Running Preprocessing"
 
-srun python preprocess_data.py
+srun git status

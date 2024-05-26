@@ -278,15 +278,15 @@ l_ = score_patterns(test_results, len(test_sentences), True)
 
 def get_export_freq_seq(data):
   export_freq_seq = {}
-  for similarity_type in METRICS:
+  for similarity_type in tqdm(METRICS):
     freq_seq = {}
     data.sort(key=lambda x: x['order_index'][similarity_type])
 
-    for k in N_CLUSTERS_LIST:
+    for k in tqdm(N_CLUSTERS_LIST):
 
       freq_seq[k] = {}
       cluster_ids = range(1, k+1)
-      for cluster_id in cluster_ids:
+      for cluster_id in tqdm(cluster_ids):
 
         tokenized_data = [
             [

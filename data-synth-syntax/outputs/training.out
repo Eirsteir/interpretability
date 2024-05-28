@@ -1,0 +1,1824 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pip in /cluster/home/eirsteir/.local/lib/python3.9/site-packages (24.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: virtualenv in /cluster/apps/eb/software/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (20.7.0)
+Requirement already satisfied: backports.entry-points-selectable>=1.0.4 in /cluster/apps/eb/software/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from virtualenv) (1.1.0)
+Requirement already satisfied: distlib<1,>=0.3.1 in /cluster/apps/eb/software/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from virtualenv) (0.3.2)
+Requirement already satisfied: filelock<4,>=3.0.0 in /cluster/apps/eb/software/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from virtualenv) (3.0.12)
+Requirement already satisfied: platformdirs<3,>=2 in /cluster/home/eirsteir/.local/lib/python3.9/site-packages (from virtualenv) (2.6.2)
+Requirement already satisfied: six<2,>=1.9.0 in /cluster/apps/eb/software/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from virtualenv) (1.16.0)
+created virtual environment CPython3.9.6.final.0-64 in 5404ms
+  creator CPython3Posix(dest=/cluster/home/eirsteir/interpretability/data-synth-syntax/env, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/cluster/home/eirsteir/.local/share/virtualenv)
+    added seed packages: MarkupSafe==2.1.5, PyYAML==6.0.1, blis==0.7.11, catalogue==2.0.10, certifi==2024.2.2, charset_normalizer==3.3.2, click==7.1.2, contourpy==1.2.1, cycler==0.12.1, cymem==2.0.8, en_core_web_sm==3.0.0, filelock==3.14.0, fonttools==4.52.1, fsspec==2024.5.0, huggingface_hub==0.23.1, idna==3.7, importlib_resources==6.4.0, jinja2==3.1.4, joblib==1.4.2, kiwisolver==1.4.5, matplotlib==3.9.0, mpmath==1.3.0, murmurhash==1.0.10, networkx==3.2.1, nltk==3.8.1, numpy==1.26.4, nvidia_cublas_cu12==12.1.3.1, nvidia_cuda_cupti_cu12==12.1.105, nvidia_cuda_nvrtc_cu12==12.1.105, nvidia_cuda_runtime_cu12==12.1.105, nvidia_cudnn_cu12==8.9.2.26, nvidia_cufft_cu12==11.0.2.54, nvidia_curand_cu12==10.3.2.106, nvidia_cusolver_cu12==11.4.5.107, nvidia_cusparse_cu12==12.1.0.106, nvidia_nccl_cu12==2.20.5, nvidia_nvjitlink_cu12==12.5.40, nvidia_nvtx_cu12==12.1.105, packaging==24.0, pandas==2.2.2, pathlib_abc==0.1.1, pathy==0.11.0, pillow==10.3.0, pip==24.0, preshed==3.0.9, pydantic==1.8.2, pyparsing==3.1.2, python_dateutil==2.9.0.post0, pytz==2024.1, regex==2024.5.15, requests==2.32.2, safetensors==0.4.3, scikit_learn==1.5.0, scipy==1.13.1, sentence_transformers==2.7.0, setuptools==69.5.1, six==1.16.0, smart_open==6.4.0, spacy==3.0.9, spacy_legacy==3.0.12, srsly==2.4.8, sympy==1.12, thinc==8.0.17, threadpoolctl==3.5.0, tokenizers==0.19.1, torch==2.3.0, tqdm==4.66.4, transformers==4.41.1, triton==2.3.0, typer==0.3.2, typing_extensions==4.12.0, tzdata==2024.1, urllib3==2.2.1, wasabi==0.10.1, wheel==0.43.0, zipp==3.18.2
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator
+Collecting https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz (from -r requirements.txt (line 4))
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz (13.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.7/13.7 MB 34.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: pandas in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.2.2)
+Requirement already satisfied: nltk in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (3.8.1)
+Requirement already satisfied: spacy in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (3.0.9)
+Requirement already satisfied: scipy in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (1.13.1)
+Requirement already satisfied: matplotlib in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 6)) (3.9.0)
+Requirement already satisfied: sentence-transformers in ./env/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (2.7.0)
+Requirement already satisfied: numpy>=1.22.4 in ./env/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (1.26.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./env/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./env/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in ./env/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2024.1)
+Requirement already satisfied: click in ./env/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 2)) (7.1.2)
+Requirement already satisfied: joblib in ./env/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 2)) (1.4.2)
+Requirement already satisfied: regex>=2021.8.3 in ./env/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 2)) (2024.5.15)
+Requirement already satisfied: tqdm in ./env/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 2)) (4.66.4)
+Requirement already satisfied: spacy-legacy<3.1.0,>=3.0.5 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (3.0.12)
+Requirement already satisfied: murmurhash<1.1.0,>=0.28.0 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (1.0.10)
+Requirement already satisfied: cymem<2.1.0,>=2.0.2 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (2.0.8)
+Requirement already satisfied: preshed<3.1.0,>=3.0.2 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (3.0.9)
+Requirement already satisfied: thinc<8.1.0,>=8.0.3 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (8.0.17)
+Requirement already satisfied: blis<0.8.0,>=0.4.0 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (0.7.11)
+Requirement already satisfied: wasabi<1.1.0,>=0.8.1 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (0.10.1)
+Requirement already satisfied: srsly<3.0.0,>=2.4.1 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (2.4.8)
+Requirement already satisfied: catalogue<2.1.0,>=2.0.4 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (2.0.10)
+Requirement already satisfied: typer<0.4.0,>=0.3.0 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (0.3.2)
+Requirement already satisfied: pathy>=0.3.5 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (0.11.0)
+Requirement already satisfied: smart-open<7.0.0,>=5.2.1 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (6.4.0)
+Requirement already satisfied: requests<3.0.0,>=2.13.0 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (2.32.2)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (1.8.2)
+Requirement already satisfied: jinja2 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (3.1.4)
+Requirement already satisfied: setuptools in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (69.5.1)
+Requirement already satisfied: packaging>=20.0 in ./env/lib/python3.9/site-packages (from spacy->-r requirements.txt (line 3)) (24.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (1.2.1)
+Requirement already satisfied: cycler>=0.10 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (4.52.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (1.4.5)
+Requirement already satisfied: pillow>=8 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (10.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (3.1.2)
+Requirement already satisfied: importlib-resources>=3.2.0 in ./env/lib/python3.9/site-packages (from matplotlib->-r requirements.txt (line 6)) (6.4.0)
+Requirement already satisfied: transformers<5.0.0,>=4.34.0 in ./env/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 7)) (4.41.1)
+Requirement already satisfied: torch>=1.11.0 in ./env/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 7)) (2.3.0)
+Requirement already satisfied: scikit-learn in ./env/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 7)) (1.5.0)
+Requirement already satisfied: huggingface-hub>=0.15.1 in ./env/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 7)) (0.23.1)
+Requirement already satisfied: filelock in ./env/lib/python3.9/site-packages (from huggingface-hub>=0.15.1->sentence-transformers->-r requirements.txt (line 7)) (3.14.0)
+Requirement already satisfied: fsspec>=2023.5.0 in ./env/lib/python3.9/site-packages (from huggingface-hub>=0.15.1->sentence-transformers->-r requirements.txt (line 7)) (2024.5.0)
+Requirement already satisfied: pyyaml>=5.1 in ./env/lib/python3.9/site-packages (from huggingface-hub>=0.15.1->sentence-transformers->-r requirements.txt (line 7)) (6.0.1)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in ./env/lib/python3.9/site-packages (from huggingface-hub>=0.15.1->sentence-transformers->-r requirements.txt (line 7)) (4.12.0)
+Requirement already satisfied: zipp>=3.1.0 in ./env/lib/python3.9/site-packages (from importlib-resources>=3.2.0->matplotlib->-r requirements.txt (line 6)) (3.18.2)
+Requirement already satisfied: pathlib-abc==0.1.1 in ./env/lib/python3.9/site-packages (from pathy>=0.3.5->spacy->-r requirements.txt (line 3)) (0.1.1)
+Requirement already satisfied: six>=1.5 in ./env/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1)) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./env/lib/python3.9/site-packages (from requests<3.0.0,>=2.13.0->spacy->-r requirements.txt (line 3)) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in ./env/lib/python3.9/site-packages (from requests<3.0.0,>=2.13.0->spacy->-r requirements.txt (line 3)) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./env/lib/python3.9/site-packages (from requests<3.0.0,>=2.13.0->spacy->-r requirements.txt (line 3)) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in ./env/lib/python3.9/site-packages (from requests<3.0.0,>=2.13.0->spacy->-r requirements.txt (line 3)) (2024.2.2)
+Requirement already satisfied: sympy in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (1.12)
+Requirement already satisfied: networkx in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (3.2.1)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.1.105)
+Requirement already satisfied: triton==2.3.0 in ./env/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (2.3.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in ./env/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (12.5.40)
+Requirement already satisfied: tokenizers<0.20,>=0.19 in ./env/lib/python3.9/site-packages (from transformers<5.0.0,>=4.34.0->sentence-transformers->-r requirements.txt (line 7)) (0.19.1)
+Requirement already satisfied: safetensors>=0.4.1 in ./env/lib/python3.9/site-packages (from transformers<5.0.0,>=4.34.0->sentence-transformers->-r requirements.txt (line 7)) (0.4.3)
+Requirement already satisfied: MarkupSafe>=2.0 in ./env/lib/python3.9/site-packages (from jinja2->spacy->-r requirements.txt (line 3)) (2.1.5)
+Requirement already satisfied: threadpoolctl>=3.1.0 in ./env/lib/python3.9/site-packages (from scikit-learn->sentence-transformers->-r requirements.txt (line 7)) (3.5.0)
+Requirement already satisfied: mpmath>=0.19 in ./env/lib/python3.9/site-packages (from sympy->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 7)) (1.3.0)
+Collecting pydantic~=1.10
+  Using cached pydantic-1.10.15-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (150 kB)
+Requirement already satisfied: typing-extensions>=4.2.0 in ./env/lib/python3.9/site-packages (from pydantic~=1.10) (4.12.0)
+Using cached pydantic-1.10.15-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Installing collected packages: pydantic
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 1.8.2
+    Uninstalling pydantic-1.8.2:
+      Successfully uninstalled pydantic-1.8.2
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+spacy 3.0.9 requires pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4, but you have pydantic 1.10.15 which is incompatible.
+thinc 8.0.17 requires pydantic!=1.8,!=1.8.1,<1.9.0,>=1.7.4, but you have pydantic 1.10.15 which is incompatible.
+Successfully installed pydantic-1.10.15
+Running Preprocessing
+/cluster/home/eirsteir/interpretability/data-synth-syntax/env/lib/python3.9/site-packages/torch/__init__.py:747: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:431.)
+  _C._set_default_tensor_type(t)
+(0.6875, (2, ['t:my', 't:name', 't:is', 'pos:B']))
+(0.6875, (3, ['t:name', 't:is', 'pos:B']))
+(0.625, (2, ['t:my', 't:name', 't:is']))
+(0.625, (2, ['t:my', 'pos:B', 't:is', 'pos:B']))
+(0.625, (3, ['t:name', 't:is']))
+(0.5625, (2, ['t:my', 't:name', 'pos:C']))
+(0.5625, (2, ['t:my', 't:name', 'pos:B']))
+(0.5625, (2, ['t:my', 'pos:B', 't:is']))
+(0.5625, (2, ['t:my', 't:is', 'pos:B']))
+(0.5625, (3, ['t:name', 'pos:C']))
+
+
+=========== RUNNING ANALYSIS FOR dialog
+
+=========== LOADING (step 1/8)
+
+=========== ANNOTATING (step 2/8)
+0it [00:00, ?it/s]1it [00:00,  4.91it/s]13it [00:00, 45.42it/s]38it [00:00, 114.55it/s]64it [00:00, 160.32it/s]88it [00:00, 185.30it/s]114it [00:00, 206.40it/s]140it [00:00, 220.99it/s]166it [00:00, 230.60it/s]192it [00:01, 237.50it/s]218it [00:01, 243.69it/s]244it [00:01, 248.52it/s]270it [00:01, 251.84it/s]297it [00:01, 254.87it/s]323it [00:01, 240.88it/s]348it [00:01, 243.14it/s]375it [00:01, 248.37it/s]401it [00:01, 251.20it/s]428it [00:01, 256.23it/s]454it [00:02, 253.86it/s]480it [00:02, 252.45it/s]496it [00:02, 219.60it/s]
+
+=========== CALCULATING DISTANCE MATRICES (step 3/8)
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.83s/it] 67%|██████▋   | 2/3 [00:03<00:01,  1.86s/it]100%|██████████| 3/3 [00:05<00:00,  1.86s/it]100%|██████████| 3/3 [00:05<00:00,  1.86s/it]
+/cluster/home/eirsteir/interpretability/data-synth-syntax/env/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+=========== CALCULATING EMBEDDINGS (step 4/8)
+Batches:   0%|          | 0/16 [00:00<?, ?it/s]Batches:   6%|▋         | 1/16 [00:03<00:49,  3.31s/it]Batches:  12%|█▎        | 2/16 [00:03<00:20,  1.44s/it]Batches:  25%|██▌       | 4/16 [00:03<00:07,  1.68it/s]Batches:  38%|███▊      | 6/16 [00:03<00:03,  2.84it/s]Batches:  50%|█████     | 8/16 [00:03<00:01,  4.12it/s]Batches:  62%|██████▎   | 10/16 [00:04<00:01,  5.54it/s]Batches:  75%|███████▌  | 12/16 [00:04<00:00,  7.01it/s]Batches:  88%|████████▊ | 14/16 [00:04<00:00,  8.65it/s]Batches: 100%|██████████| 16/16 [00:04<00:00,  3.61it/s]
+
+=========== CLUSTERING (step 5/8)
+getting linkages for  embedding
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 931.28it/s]
+getting linkages for  token
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 969.78it/s]
+getting linkages for  pos
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 954.61it/s]
+getting linkages for  dep
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 948.29it/s]
+
+=========== GETTING FREQUENCIES (step 7/8)
+  0%|          | 0/4 [00:00<?, ?it/s]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A100%|██████████| 3/3 [00:00<00:00, 258.22it/s]
+
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A100%|██████████| 5/5 [00:00<00:00, 429.16it/s]
+
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A100%|██████████| 8/8 [00:00<00:00, 646.07it/s]
+
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A100%|██████████| 9/9 [00:00<00:00, 719.71it/s]
+
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A100%|██████████| 10/10 [00:00<00:00, 785.04it/s]
+
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A100%|██████████| 11/11 [00:00<00:00, 758.08it/s]
+
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A100%|██████████| 12/12 [00:00<00:00, 726.38it/s]
+
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A100%|██████████| 15/15 [00:00<00:00, 815.90it/s]
+
+ 73%|███████▎  | 8/11 [00:00<00:00, 71.27it/s][A
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A100%|██████████| 20/20 [00:00<00:00, 872.63it/s]
+
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A100%|██████████| 30/30 [00:00<00:00, 1085.51it/s]
+
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A100%|██████████| 50/50 [00:00<00:00, 867.76it/s]
+100%|██████████| 11/11 [00:00<00:00, 49.71it/s]
+ 25%|██▌       | 1/4 [00:00<00:00,  4.51it/s]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A100%|██████████| 3/3 [00:00<00:00, 239.62it/s]
+
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A100%|██████████| 5/5 [00:00<00:00, 369.15it/s]
+
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A100%|██████████| 8/8 [00:00<00:00, 479.60it/s]
+
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A100%|██████████| 9/9 [00:00<00:00, 463.54it/s]
+
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A100%|██████████| 10/10 [00:00<00:00, 496.41it/s]
+
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A100%|██████████| 11/11 [00:00<00:00, 525.30it/s]
+
+ 55%|█████▍    | 6/11 [00:00<00:00, 57.30it/s][A
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A100%|██████████| 12/12 [00:00<00:00, 568.73it/s]
+
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A100%|██████████| 15/15 [00:00<00:00, 547.75it/s]
+
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A100%|██████████| 20/20 [00:00<00:00, 606.57it/s]
+
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A100%|██████████| 30/30 [00:00<00:00, 510.52it/s]
+
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A100%|██████████| 50/50 [00:00<00:00, 539.44it/s]
+100%|██████████| 11/11 [00:00<00:00, 32.45it/s]
+ 50%|█████     | 2/4 [00:00<00:00,  3.44it/s]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A100%|██████████| 3/3 [00:00<00:00, 263.87it/s]
+
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A100%|██████████| 5/5 [00:00<00:00, 388.39it/s]
+
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A100%|██████████| 8/8 [00:00<00:00, 510.84it/s]
+
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A100%|██████████| 9/9 [00:00<00:00, 570.80it/s]
+
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A100%|██████████| 10/10 [00:00<00:00, 618.89it/s]
+
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A100%|██████████| 11/11 [00:00<00:00, 667.75it/s]
+
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A100%|██████████| 12/12 [00:00<00:00, 735.18it/s]
+
+ 64%|██████▎   | 7/11 [00:00<00:00, 65.86it/s][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A100%|██████████| 15/15 [00:00<00:00, 767.03it/s]
+
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A100%|██████████| 20/20 [00:00<00:00, 876.46it/s]
+
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A100%|██████████| 30/30 [00:00<00:00, 1014.81it/s]
+
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A100%|██████████| 50/50 [00:00<00:00, 1000.12it/s]
+100%|██████████| 11/11 [00:00<00:00, 47.97it/s]
+ 75%|███████▌  | 3/4 [00:00<00:00,  3.80it/s]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A100%|██████████| 3/3 [00:00<00:00, 261.45it/s]
+
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A100%|██████████| 5/5 [00:00<00:00, 388.86it/s]
+
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A100%|██████████| 8/8 [00:00<00:00, 591.25it/s]
+
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A100%|██████████| 9/9 [00:00<00:00, 639.51it/s]
+
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A100%|██████████| 10/10 [00:00<00:00, 692.94it/s]
+
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A100%|██████████| 11/11 [00:00<00:00, 690.50it/s]
+
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A100%|██████████| 12/12 [00:00<00:00, 700.14it/s]
+
+ 64%|██████▎   | 7/11 [00:00<00:00, 69.24it/s][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A100%|██████████| 15/15 [00:00<00:00, 831.10it/s]
+
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A100%|██████████| 20/20 [00:00<00:00, 891.49it/s]
+
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A100%|██████████| 30/30 [00:00<00:00, 934.68it/s]
+
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A100%|██████████| 50/50 [00:00<00:00, 930.52it/s]
+100%|██████████| 11/11 [00:00<00:00, 48.14it/s]
+100%|██████████| 4/4 [00:01<00:00,  4.01it/s]100%|██████████| 4/4 [00:01<00:00,  3.92it/s]
+
+=========== SAVING (step 8/8)
+
+
+=========== RUNNING ANALYSIS FOR curriculum_dialogues
+
+=========== LOADING (step 1/8)
+
+=========== ANNOTATING (step 2/8)
+0it [00:00, ?it/s]9it [00:00, 87.72it/s]19it [00:00, 86.98it/s]32it [00:00, 102.20it/s]45it [00:00, 112.33it/s]58it [00:00, 117.10it/s]70it [00:00, 110.60it/s]82it [00:00, 96.71it/s] 95it [00:00, 103.96it/s]108it [00:01, 110.46it/s]120it [00:01, 112.92it/s]135it [00:01, 119.33it/s]148it [00:01, 117.63it/s]161it [00:01, 119.45it/s]175it [00:01, 123.20it/s]188it [00:01, 119.92it/s]201it [00:01, 112.97it/s]214it [00:01, 116.38it/s]228it [00:02, 121.38it/s]242it [00:02, 125.06it/s]258it [00:02, 131.44it/s]274it [00:02, 136.44it/s]288it [00:02, 132.78it/s]302it [00:02, 127.74it/s]316it [00:02, 130.78it/s]330it [00:02, 120.01it/s]344it [00:02, 123.32it/s]360it [00:03, 130.61it/s]374it [00:03, 128.45it/s]387it [00:03, 126.37it/s]400it [00:03, 124.48it/s]415it [00:03, 129.57it/s]429it [00:03, 95.63it/s] 442it [00:03, 101.65it/s]454it [00:03, 102.14it/s]468it [00:04, 110.16it/s]481it [00:04, 113.58it/s]494it [00:04, 117.64it/s]500it [00:04, 117.44it/s]
+
+=========== CALCULATING DISTANCE MATRICES (step 3/8)
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:31<01:02, 31.47s/it] 67%|██████▋   | 2/3 [00:54<00:26, 26.75s/it]100%|██████████| 3/3 [01:21<00:00, 26.54s/it]100%|██████████| 3/3 [01:21<00:00, 27.07s/it]
+/cluster/home/eirsteir/interpretability/data-synth-syntax/env/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+=========== CALCULATING EMBEDDINGS (step 4/8)
+Batches:   0%|          | 0/16 [00:00<?, ?it/s]Batches:   6%|▋         | 1/16 [00:01<00:25,  1.73s/it]Batches:  12%|█▎        | 2/16 [00:02<00:19,  1.38s/it]Batches:  19%|█▉        | 3/16 [00:03<00:14,  1.10s/it]Batches:  25%|██▌       | 4/16 [00:04<00:11,  1.07it/s]Batches:  31%|███▏      | 5/16 [00:04<00:09,  1.21it/s]Batches:  38%|███▊      | 6/16 [00:05<00:06,  1.45it/s]Batches:  44%|████▍     | 7/16 [00:05<00:05,  1.77it/s]Batches:  50%|█████     | 8/16 [00:05<00:03,  2.09it/s]Batches:  56%|█████▋    | 9/16 [00:06<00:02,  2.37it/s]Batches:  62%|██████▎   | 10/16 [00:06<00:02,  2.74it/s]Batches:  69%|██████▉   | 11/16 [00:06<00:01,  3.08it/s]Batches:  75%|███████▌  | 12/16 [00:06<00:01,  3.34it/s]Batches:  81%|████████▏ | 13/16 [00:07<00:00,  3.74it/s]Batches:  88%|████████▊ | 14/16 [00:07<00:00,  4.33it/s]Batches:  94%|█████████▍| 15/16 [00:07<00:00,  4.93it/s]Batches: 100%|██████████| 16/16 [00:07<00:00,  2.12it/s]
+
+=========== CLUSTERING (step 5/8)
+getting linkages for  embedding
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 941.31it/s]
+getting linkages for  token
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 958.56it/s]
+getting linkages for  pos
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 943.39it/s]
+getting linkages for  dep
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 933.14it/s]
+
+=========== GETTING FREQUENCIES (step 7/8)
+  0%|          | 0/4 [00:00<?, ?it/s]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A
+
+ 33%|███▎      | 1/3 [04:06<08:12, 246.27s/it][A[A
+
+ 67%|██████▋   | 2/3 [04:40<02:01, 121.42s/it][A[A
+
+100%|██████████| 3/3 [04:40<00:00, 66.20s/it] [A[A100%|██████████| 3/3 [04:40<00:00, 93.60s/it]
+
+  9%|▉         | 1/11 [04:40<46:47, 280.79s/it][A
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A
+
+ 20%|██        | 1/5 [08:34<34:16, 514.12s/it][A[A
+
+ 40%|████      | 2/5 [08:34<10:36, 212.11s/it][A[A
+
+ 60%|██████    | 3/5 [09:08<04:21, 130.84s/it][A[A
+
+ 80%|████████  | 4/5 [09:11<01:20, 80.12s/it] [A[A
+
+100%|██████████| 5/5 [09:15<00:00, 52.61s/it][A[A100%|██████████| 5/5 [09:15<00:00, 111.03s/it]
+
+ 18%|█▊        | 2/11 [13:55<1:06:19, 442.18s/it][A
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A
+
+ 12%|█▎        | 1/8 [08:31<59:38, 511.24s/it][A[A
+
+ 25%|██▌       | 2/8 [08:31<21:05, 210.84s/it][A[A
+
+ 38%|███▊      | 3/8 [08:34<09:38, 115.73s/it][A[A
+
+ 50%|█████     | 4/8 [09:35<06:16, 94.24s/it] [A[A
+
+ 62%|██████▎   | 5/8 [10:12<03:40, 73.40s/it][A[A
+
+ 75%|███████▌  | 6/8 [10:14<01:38, 49.25s/it][A[A
+
+ 88%|████████▊ | 7/8 [10:23<00:36, 36.10s/it][A[A
+
+100%|██████████| 8/8 [10:27<00:00, 25.77s/it][A[A100%|██████████| 8/8 [10:27<00:00, 78.39s/it]
+
+ 27%|██▋       | 3/11 [24:23<1:10:13, 526.64s/it][A
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A
+
+ 11%|█         | 1/9 [00:15<02:03, 15.39s/it][A[A
+
+ 22%|██▏       | 2/9 [19:53<1:21:36, 699.46s/it][A[A
+
+ 33%|███▎      | 3/9 [19:54<38:02, 380.35s/it]  [A[A
+
+ 44%|████▍     | 4/9 [19:56<19:16, 231.20s/it][A[A
+
+ 56%|█████▌    | 5/9 [20:58<11:19, 169.89s/it][A[A
+
+ 67%|██████▋   | 6/9 [21:34<06:13, 124.55s/it][A[A
+
+ 78%|███████▊  | 7/9 [21:37<02:49, 84.65s/it] [A[A
+
+ 89%|████████▉ | 8/9 [21:46<01:00, 60.63s/it][A[A
+
+100%|██████████| 9/9 [21:49<00:00, 42.78s/it][A[A100%|██████████| 9/9 [21:49<00:00, 145.53s/it]
+
+ 36%|███▋      | 4/11 [46:12<1:37:30, 835.82s/it][A
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A
+
+ 10%|█         | 1/10 [00:15<02:18, 15.35s/it][A[A
+
+ 20%|██        | 2/10 [19:58<1:33:37, 702.18s/it][A[A
+
+ 30%|███       | 3/10 [19:58<44:32, 381.82s/it]  [A[A
+
+ 40%|████      | 4/10 [20:01<23:12, 232.09s/it][A[A
+
+ 50%|█████     | 5/10 [21:02<14:12, 170.42s/it][A[A
+
+ 60%|██████    | 6/10 [21:38<08:19, 124.84s/it][A[A
+
+ 70%|███████   | 7/10 [21:41<04:14, 84.90s/it] [A[A
+
+ 80%|████████  | 8/10 [21:43<01:56, 58.50s/it][A[A
+
+ 90%|█████████ | 9/10 [21:52<00:43, 43.08s/it][A[A
+
+100%|██████████| 10/10 [21:56<00:00, 30.86s/it][A[A100%|██████████| 10/10 [21:56<00:00, 131.62s/it]
+
+ 45%|████▌     | 5/11 [1:08:09<1:40:54, 1009.05s/it][A
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A
+
+  9%|▉         | 1/11 [00:15<02:32, 15.27s/it][A[A
+
+ 18%|█▊        | 2/11 [19:54<1:45:01, 700.16s/it][A[A
+
+ 27%|██▋       | 3/11 [19:55<50:45, 380.73s/it]  [A[A
+
+ 36%|███▋      | 4/11 [19:58<26:59, 231.43s/it][A[A
+
+ 45%|████▌     | 5/11 [20:59<17:00, 170.02s/it][A[A
+
+ 55%|█████▍    | 6/11 [21:35<10:22, 124.51s/it][A[A
+
+ 64%|██████▎   | 7/11 [21:38<05:39, 84.78s/it] [A[A
+
+ 73%|███████▎  | 8/11 [21:40<02:55, 58.37s/it][A[A
+
+ 82%|████████▏ | 9/11 [21:49<01:25, 42.94s/it][A[A
+
+ 91%|█████████ | 10/11 [21:49<00:29, 29.84s/it][A[A
+
+100%|██████████| 11/11 [22:02<00:00, 24.71s/it][A[A100%|██████████| 11/11 [22:02<00:00, 120.25s/it]
+
+ 55%|█████▍    | 6/11 [1:30:11<1:32:58, 1115.69s/it][A
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A
+
+  8%|▊         | 1/12 [00:15<02:46, 15.14s/it][A[A
+
+ 17%|█▋        | 2/12 [13:27<1:18:44, 472.42s/it][A[A
+
+ 25%|██▌       | 3/12 [19:48<1:04:36, 430.71s/it][A[A
+
+ 33%|███▎      | 4/12 [19:49<34:47, 260.90s/it]  [A[A
+
+ 42%|████▏     | 5/12 [19:51<19:34, 167.78s/it][A[A
+
+ 50%|█████     | 6/12 [20:52<13:08, 131.47s/it][A[A
+
+ 58%|█████▊    | 7/12 [21:29<08:21, 100.36s/it][A[A
+
+ 67%|██████▋   | 8/12 [21:32<04:37, 69.36s/it] [A[A
+
+ 75%|███████▌  | 9/12 [21:34<02:24, 48.25s/it][A[A
+
+ 83%|████████▎ | 10/12 [21:43<01:12, 36.19s/it][A[A
+
+ 92%|█████████▏| 11/12 [21:43<00:25, 25.23s/it][A[A
+
+100%|██████████| 12/12 [21:56<00:00, 21.49s/it][A[A100%|██████████| 12/12 [21:56<00:00, 109.72s/it]
+
+ 64%|██████▎   | 7/11 [1:52:08<1:18:45, 1181.37s/it][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A
+
+  7%|▋         | 1/15 [00:01<00:24,  1.74s/it][A[A
+
+ 13%|█▎        | 2/15 [00:26<03:20, 15.41s/it][A[A
+
+ 20%|██        | 3/15 [13:40<1:14:09, 370.81s/it][A[A
+
+ 27%|██▋       | 4/15 [29:50<1:51:21, 607.43s/it][A[A
+
+ 33%|███▎      | 5/15 [30:25<1:06:50, 401.05s/it][A[A
+
+ 40%|████      | 6/15 [30:26<39:43, 264.88s/it]  [A[A
+
+ 47%|████▋     | 7/15 [30:26<23:47, 178.47s/it][A[A
+
+ 53%|█████▎    | 8/15 [31:04<15:34, 133.49s/it][A[A
+
+ 60%|██████    | 9/15 [32:04<11:04, 110.80s/it][A[A
+
+ 67%|██████▋   | 10/15 [32:41<07:19, 87.90s/it][A[A
+
+ 73%|███████▎  | 11/15 [32:44<04:07, 61.86s/it][A[A
+
+ 80%|████████  | 12/15 [32:46<02:10, 43.60s/it][A[A
+
+ 87%|████████▋ | 13/15 [32:55<01:06, 33.18s/it][A[A
+
+ 93%|█████████▎| 14/15 [32:55<00:23, 23.27s/it][A[A
+
+100%|██████████| 15/15 [33:08<00:00, 20.15s/it][A[A100%|██████████| 15/15 [33:08<00:00, 132.58s/it]
+
+ 73%|███████▎  | 8/11 [2:25:17<1:11:55, 1438.39s/it][A
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A
+
+  5%|▌         | 1/20 [00:01<00:33,  1.74s/it][A[A
+
+ 10%|█         | 2/20 [00:26<04:37, 15.41s/it][A[A
+
+ 15%|█▌        | 3/20 [09:38<1:13:47, 260.44s/it][A[A
+
+ 20%|██        | 4/20 [18:03<1:35:12, 357.04s/it][A[A
+
+ 25%|██▌       | 5/20 [34:11<2:24:17, 577.16s/it][A[A
+
+ 30%|███       | 6/20 [34:46<1:31:39, 392.85s/it][A[A
+
+ 35%|███▌      | 7/20 [34:46<57:19, 264.60s/it]  [A[A
+
+ 40%|████      | 8/20 [34:48<36:08, 180.70s/it][A[A
+
+ 45%|████▌     | 9/20 [34:48<22:48, 124.42s/it][A[A
+
+ 50%|█████     | 10/20 [36:28<19:29, 116.96s/it][A[A
+
+ 55%|█████▌    | 11/20 [36:29<12:11, 81.24s/it] [A[A
+
+ 60%|██████    | 12/20 [37:30<10:00, 75.08s/it][A[A
+
+ 65%|██████▌   | 13/20 [38:06<07:22, 63.27s/it][A[A
+
+ 70%|███████   | 14/20 [38:09<04:30, 45.04s/it][A[A
+
+ 75%|███████▌  | 15/20 [38:30<03:08, 37.77s/it][A[A
+
+ 80%|████████  | 16/20 [38:31<01:47, 26.75s/it][A[A
+
+ 85%|████████▌ | 17/20 [38:40<01:04, 21.46s/it][A[A
+
+ 90%|█████████ | 18/20 [38:40<00:30, 15.13s/it][A[A
+
+ 95%|█████████▌| 19/20 [39:03<00:17, 17.33s/it][A[A
+
+100%|██████████| 20/20 [39:09<00:00, 14.13s/it][A[A100%|██████████| 20/20 [39:09<00:00, 117.50s/it]
+
+ 82%|████████▏ | 9/11 [3:04:27<57:26, 1723.36s/it]  [A
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A
+
+  3%|▎         | 1/30 [00:01<00:46,  1.61s/it][A[A
+
+  7%|▋         | 2/30 [00:09<02:35,  5.55s/it][A[A
+
+ 10%|█         | 3/30 [00:31<05:42, 12.69s/it][A[A
+
+ 13%|█▎        | 4/30 [09:43<1:37:47, 225.69s/it][A[A
+
+ 17%|█▋        | 5/30 [14:23<1:42:10, 245.21s/it][A[A
+
+ 20%|██        | 6/30 [19:51<1:49:20, 273.37s/it][A[A
+
+ 23%|██▎       | 7/30 [25:51<1:55:44, 301.95s/it][A[A
+
+ 27%|██▋       | 8/30 [52:19<4:20:48, 711.29s/it][A[A
+
+ 30%|███       | 9/30 [52:27<2:52:01, 491.51s/it][A[A
+
+ 33%|███▎      | 10/30 [53:08<1:57:23, 352.16s/it][A[A
+
+ 37%|███▋      | 11/30 [53:14<1:18:02, 246.44s/it][A[A
+
+ 40%|████      | 12/30 [53:14<51:27, 171.51s/it]  [A[A
+
+ 43%|████▎     | 13/30 [53:16<33:57, 119.87s/it][A[A
+
+ 47%|████▋     | 14/30 [53:16<22:21, 83.87s/it] [A[A
+
+ 50%|█████     | 15/30 [54:55<22:04, 88.27s/it][A[A
+
+ 53%|█████▎    | 16/30 [54:55<14:24, 61.77s/it][A[A
+
+ 57%|█████▋    | 17/30 [55:56<13:21, 61.65s/it][A[A
+
+ 60%|██████    | 18/30 [56:50<11:51, 59.28s/it][A[A
+
+ 63%|██████▎   | 19/30 [56:57<07:58, 43.49s/it][A[A
+
+ 67%|██████▋   | 20/30 [57:00<05:12, 31.27s/it][A[A
+
+ 70%|███████   | 21/30 [57:21<04:13, 28.18s/it][A[A
+
+ 73%|███████▎  | 22/30 [57:21<02:38, 19.79s/it][A[A
+
+ 77%|███████▋  | 23/30 [57:22<01:39, 14.16s/it][A[A
+
+ 80%|████████  | 24/30 [57:31<01:15, 12.66s/it][A[A
+
+ 83%|████████▎ | 25/30 [57:33<00:47,  9.56s/it][A[A
+
+ 87%|████████▋ | 26/30 [58:01<01:00, 15.16s/it][A[A
+
+ 90%|█████████ | 27/30 [58:02<00:32, 10.85s/it][A[A
+
+ 93%|█████████▎| 28/30 [58:24<00:28, 14.14s/it][A[A
+
+ 97%|█████████▋| 29/30 [58:28<00:11, 11.13s/it][A[A
+
+100%|██████████| 30/30 [58:49<00:00, 14.09s/it][A[A100%|██████████| 30/30 [58:49<00:00, 117.66s/it]
+
+ 91%|█████████ | 10/11 [4:03:16<38:01, 2281.02s/it][A
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A
+
+  2%|▏         | 1/50 [00:01<01:25,  1.74s/it][A[A
+
+  4%|▍         | 2/50 [00:03<01:30,  1.88s/it][A[A
+
+  6%|▌         | 3/50 [00:15<05:08,  6.56s/it][A[A
+
+  8%|▊         | 4/50 [00:19<04:06,  5.36s/it][A[A
+
+ 10%|█         | 5/50 [00:25<04:12,  5.60s/it][A[A
+
+ 12%|█▏        | 6/50 [00:48<08:34, 11.68s/it][A[A
+
+ 14%|█▍        | 7/50 [02:40<31:49, 44.41s/it][A[A
+
+ 16%|█▌        | 8/50 [03:02<26:01, 37.18s/it][A[A
+
+ 18%|█▊        | 9/50 [14:52<2:49:03, 247.40s/it][A[A
+
+ 20%|██        | 10/50 [15:50<2:06:06, 189.16s/it][A[A
+
+ 22%|██▏       | 11/50 [23:32<2:57:07, 272.50s/it][A[A
+
+ 24%|██▍       | 12/50 [28:11<2:53:55, 274.62s/it][A[A
+
+ 26%|██▌       | 13/50 [38:09<3:49:39, 372.43s/it][A[A
+
+ 28%|██▊       | 14/50 [42:57<3:28:17, 347.15s/it][A[A
+
+ 30%|███       | 15/50 [48:59<3:24:58, 351.39s/it][A[A
+
+ 32%|███▏      | 16/50 [1:15:28<6:50:20, 724.13s/it][A[A
+
+ 34%|███▍      | 17/50 [1:15:37<4:39:53, 508.88s/it][A[A
+
+ 36%|███▌      | 18/50 [1:16:17<3:16:15, 368.00s/it][A[A
+
+ 38%|███▊      | 19/50 [1:16:18<2:13:12, 257.83s/it][A[A
+
+ 40%|████      | 20/50 [1:17:09<1:37:50, 195.67s/it][A[A
+
+ 42%|████▏     | 21/50 [1:17:15<1:07:07, 138.88s/it][A[A
+
+ 44%|████▍     | 22/50 [1:17:15<45:22, 97.24s/it]   [A[A
+
+ 46%|████▌     | 23/50 [1:17:16<30:39, 68.13s/it][A[A
+
+ 48%|████▊     | 24/50 [1:17:17<20:52, 48.18s/it][A[A
+
+ 50%|█████     | 25/50 [1:17:21<14:28, 34.73s/it][A[A
+
+ 52%|█████▏    | 26/50 [1:17:24<10:10, 25.43s/it][A[A
+
+ 54%|█████▍    | 27/50 [1:17:25<06:52, 17.95s/it][A[A
+
+ 56%|█████▌    | 28/50 [1:19:04<15:31, 42.33s/it][A[A
+
+ 58%|█████▊    | 29/50 [1:19:22<12:16, 35.08s/it][A[A
+
+ 60%|██████    | 30/50 [1:19:22<08:12, 24.60s/it][A[A
+
+ 62%|██████▏   | 31/50 [1:20:34<12:14, 38.65s/it][A[A
+
+ 64%|██████▍   | 32/50 [1:21:11<11:25, 38.10s/it][A[A
+
+ 66%|██████▌   | 33/50 [1:22:05<12:10, 42.95s/it][A[A
+
+ 68%|██████▊   | 34/50 [1:22:11<08:31, 31.99s/it][A[A
+
+ 70%|███████   | 35/50 [1:22:14<05:50, 23.35s/it][A[A
+
+ 72%|███████▏  | 36/50 [1:22:15<03:53, 16.67s/it][A[A
+
+ 74%|███████▍  | 37/50 [1:23:09<06:01, 27.82s/it][A[A
+
+ 76%|███████▌  | 38/50 [1:23:21<04:34, 22.87s/it][A[A
+
+ 78%|███████▊  | 39/50 [1:23:21<02:56, 16.08s/it][A[A
+
+ 80%|████████  | 40/50 [1:23:22<01:55, 11.56s/it][A[A
+
+ 82%|████████▏ | 41/50 [1:23:27<01:26,  9.57s/it][A[A
+
+ 84%|████████▍ | 42/50 [1:23:40<01:24, 10.59s/it][A[A
+
+ 86%|████████▌ | 43/50 [1:23:42<00:56,  8.10s/it][A[A
+
+ 88%|████████▊ | 44/50 [1:24:10<01:24, 14.06s/it][A[A
+
+ 90%|█████████ | 45/50 [1:24:12<00:51, 10.29s/it][A[A
+
+ 92%|█████████▏| 46/50 [1:24:13<00:30,  7.67s/it][A[A
+
+ 94%|█████████▍| 47/50 [1:24:36<00:36, 12.16s/it][A[A
+
+ 96%|█████████▌| 48/50 [1:24:40<00:19,  9.67s/it][A[A
+
+ 98%|█████████▊| 49/50 [1:25:05<00:14, 14.52s/it][A[A
+
+100%|██████████| 50/50 [1:25:24<00:00, 15.67s/it][A[A100%|██████████| 50/50 [1:25:24<00:00, 102.49s/it]
+
+100%|██████████| 11/11 [5:28:41<00:00, 3151.20s/it][A100%|██████████| 11/11 [5:28:41<00:00, 1792.82s/it]
+ 25%|██▌       | 1/4 [5:28:41<16:26:03, 19721.04s/it]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A
+
+ 33%|███▎      | 1/3 [00:38<01:17, 38.85s/it][A[A
+
+ 67%|██████▋   | 2/3 [00:48<00:21, 21.41s/it][A[A
+
+100%|██████████| 3/3 [00:48<00:00, 11.77s/it][A[A100%|██████████| 3/3 [00:48<00:00, 16.12s/it]
+
+  9%|▉         | 1/11 [00:48<08:03, 48.36s/it][A
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A
+
+ 20%|██        | 1/5 [00:37<02:28, 37.21s/it][A[A
+
+ 40%|████      | 2/5 [07:33<12:59, 259.92s/it][A[A
+
+ 60%|██████    | 3/5 [07:33<04:43, 141.57s/it][A[A
+
+ 80%|████████  | 4/5 [07:42<01:29, 89.30s/it] [A[A
+
+100%|██████████| 5/5 [07:43<00:00, 57.21s/it][A[A100%|██████████| 5/5 [07:43<00:00, 92.65s/it]
+
+ 18%|█▊        | 2/11 [08:31<43:51, 292.41s/it][A
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A
+
+ 12%|█▎        | 1/8 [01:09<08:07, 69.67s/it][A[A
+
+ 25%|██▌       | 2/8 [01:45<04:59, 49.97s/it][A[A
+
+ 38%|███▊      | 3/8 [08:42<18:06, 217.28s/it][A[A
+
+ 50%|█████     | 4/8 [08:45<08:51, 132.86s/it][A[A
+
+ 62%|██████▎   | 5/8 [08:46<04:15, 85.22s/it] [A[A
+
+ 75%|███████▌  | 6/8 [08:55<01:58, 59.36s/it][A[A
+
+ 88%|████████▊ | 7/8 [08:56<00:40, 40.11s/it][A[A100%|██████████| 8/8 [08:56<00:00, 67.02s/it]
+
+ 27%|██▋       | 3/11 [17:27<53:49, 403.70s/it][A
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A
+
+ 11%|█         | 1/9 [01:09<09:17, 69.65s/it][A[A
+
+ 22%|██▏       | 2/9 [01:45<05:50, 50.04s/it][A[A
+
+ 33%|███▎      | 3/9 [08:42<21:43, 217.21s/it][A[A
+
+ 44%|████▍     | 4/9 [08:45<11:03, 132.77s/it][A[A
+
+ 56%|█████▌    | 5/9 [09:08<06:13, 93.29s/it] [A[A
+
+ 67%|██████▋   | 6/9 [09:09<03:05, 61.77s/it][A[A
+
+ 78%|███████▊  | 7/9 [09:18<01:29, 44.53s/it][A[A
+
+ 89%|████████▉ | 8/9 [09:18<00:30, 30.51s/it][A[A100%|██████████| 9/9 [09:18<00:00, 62.10s/it]
+
+ 36%|███▋      | 4/11 [26:46<54:14, 464.97s/it][A
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A
+
+ 10%|█         | 1/10 [01:09<10:26, 69.63s/it][A[A
+
+ 20%|██        | 2/10 [01:45<06:39, 49.99s/it][A[A
+
+ 30%|███       | 3/10 [19:06<58:36, 502.31s/it][A[A
+
+ 40%|████      | 4/10 [19:22<31:01, 310.29s/it][A[A
+
+ 50%|█████     | 5/10 [19:25<16:38, 199.64s/it][A[A
+
+ 60%|██████    | 6/10 [19:48<09:18, 139.64s/it][A[A
+
+ 70%|███████   | 7/10 [19:49<04:42, 94.18s/it] [A[A
+
+ 80%|████████  | 8/10 [19:58<02:14, 67.07s/it][A[A
+
+ 90%|█████████ | 9/10 [19:59<00:46, 46.25s/it][A[A100%|██████████| 10/10 [19:59<00:00, 119.92s/it]
+
+ 45%|████▌     | 5/11 [46:45<1:12:58, 729.73s/it][A
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A
+
+  9%|▉         | 1/11 [01:09<11:35, 69.56s/it][A[A
+
+ 18%|█▊        | 2/11 [01:45<07:29, 49.97s/it][A[A
+
+ 27%|██▋       | 3/11 [19:12<1:07:18, 504.86s/it][A[A
+
+ 36%|███▋      | 4/11 [19:27<36:22, 311.77s/it]  [A[A
+
+ 45%|████▌     | 5/11 [19:31<20:03, 200.60s/it][A[A
+
+ 55%|█████▍    | 6/11 [19:54<11:41, 140.30s/it][A[A
+
+ 64%|██████▎   | 7/11 [19:55<06:18, 94.60s/it] [A[A
+
+ 73%|███████▎  | 8/11 [19:57<03:15, 65.21s/it][A[A
+
+ 82%|████████▏ | 9/11 [20:06<01:35, 47.70s/it][A[A
+
+ 91%|█████████ | 10/11 [20:06<00:33, 33.12s/it][A[A100%|██████████| 11/11 [20:07<00:00, 109.73s/it]
+
+ 55%|█████▍    | 6/11 [1:06:52<1:14:20, 892.02s/it][A
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A
+
+  8%|▊         | 1/12 [01:09<12:48, 69.85s/it][A[A
+
+ 17%|█▋        | 2/12 [01:46<08:20, 50.09s/it][A[A
+
+ 25%|██▌       | 3/12 [19:24<1:16:33, 510.41s/it][A[A
+
+ 33%|███▎      | 4/12 [20:04<43:18, 324.79s/it]  [A[A
+
+ 42%|████▏     | 5/12 [20:07<24:20, 208.58s/it][A[A
+
+ 50%|█████     | 6/12 [20:10<13:53, 138.84s/it][A[A
+
+ 58%|█████▊    | 7/12 [20:33<08:25, 101.07s/it][A[A
+
+ 67%|██████▋   | 8/12 [20:34<04:36, 69.05s/it] [A[A
+
+ 75%|███████▌  | 9/12 [20:36<02:24, 48.14s/it][A[A
+
+ 83%|████████▎ | 10/12 [20:45<01:12, 36.12s/it][A[A
+
+ 92%|█████████▏| 11/12 [20:46<00:25, 25.21s/it][A[A100%|██████████| 12/12 [20:46<00:00, 103.86s/it]
+
+ 64%|██████▎   | 7/11 [1:27:39<1:07:11, 1007.83s/it][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A
+
+  7%|▋         | 1/15 [01:09<16:19, 69.95s/it][A[A
+
+ 13%|█▎        | 2/15 [01:46<10:55, 50.39s/it][A[A
+
+ 20%|██        | 3/15 [19:27<1:42:18, 511.57s/it][A[A
+
+ 27%|██▋       | 4/15 [20:07<59:40, 325.52s/it]  [A[A
+
+ 33%|███▎      | 5/15 [20:09<34:50, 209.05s/it][A[A
+
+ 40%|████      | 6/15 [20:13<20:51, 139.09s/it][A[A
+
+ 47%|████▋     | 7/15 [20:36<13:30, 101.25s/it][A[A
+
+ 53%|█████▎    | 8/15 [20:37<08:04, 69.18s/it] [A[A
+
+ 60%|██████    | 9/15 [21:32<06:30, 65.02s/it][A[A
+
+ 67%|██████▋   | 10/15 [21:40<03:56, 47.30s/it][A[A
+
+ 73%|███████▎  | 11/15 [21:56<02:30, 37.74s/it][A[A
+
+ 80%|████████  | 12/15 [22:12<01:33, 31.13s/it][A[A
+
+ 87%|████████▋ | 13/15 [22:16<00:45, 22.78s/it][A[A
+
+ 93%|█████████▎| 14/15 [22:16<00:16, 16.08s/it][A[A100%|██████████| 15/15 [22:16<00:00, 89.12s/it]
+
+ 73%|███████▎  | 8/11 [1:49:55<55:37, 1112.57s/it]  [A
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A
+
+  5%|▌         | 1/20 [00:03<00:58,  3.08s/it][A[A
+
+ 10%|█         | 2/20 [01:34<16:29, 54.98s/it][A[A
+
+ 15%|█▌        | 3/20 [01:39<09:10, 32.39s/it][A[A
+
+ 20%|██        | 4/20 [02:37<11:16, 42.29s/it][A[A
+
+ 25%|██▌       | 5/20 [03:18<10:28, 41.87s/it][A[A
+
+ 30%|███       | 6/20 [26:15<1:55:39, 495.67s/it][A[A
+
+ 35%|███▌      | 7/20 [26:55<1:15:07, 346.75s/it][A[A
+
+ 40%|████      | 8/20 [26:57<47:26, 237.21s/it]  [A[A
+
+ 45%|████▌     | 9/20 [27:01<30:04, 164.09s/it][A[A
+
+ 50%|█████     | 10/20 [27:24<20:06, 120.63s/it][A[A
+
+ 55%|█████▌    | 11/20 [27:27<12:40, 84.52s/it] [A[A
+
+ 60%|██████    | 12/20 [27:28<07:53, 59.25s/it][A[A
+
+ 65%|██████▌   | 13/20 [27:29<04:51, 41.58s/it][A[A
+
+ 70%|███████   | 14/20 [28:25<04:35, 45.85s/it][A[A
+
+ 75%|███████▌  | 15/20 [28:32<02:51, 34.20s/it][A[A
+
+ 80%|████████  | 16/20 [28:48<01:55, 28.77s/it][A[A
+
+ 85%|████████▌ | 17/20 [29:04<01:14, 24.87s/it][A[A
+
+ 90%|█████████ | 18/20 [29:07<00:36, 18.47s/it][A[A
+
+ 95%|█████████▌| 19/20 [29:08<00:13, 13.06s/it][A[A100%|██████████| 20/20 [29:08<00:00, 87.43s/it]
+
+ 82%|████████▏ | 9/11 [2:19:04<43:42, 1311.38s/it][A
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A
+
+  3%|▎         | 1/30 [00:02<01:24,  2.92s/it][A[A
+
+  7%|▋         | 2/30 [02:19<37:55, 81.28s/it][A[A
+
+ 10%|█         | 3/30 [03:25<33:28, 74.38s/it][A[A
+
+ 13%|█▎        | 4/30 [03:30<20:26, 47.17s/it][A[A
+
+ 17%|█▋        | 5/30 [04:28<21:11, 50.87s/it][A[A
+
+ 20%|██        | 6/30 [05:08<18:56, 47.37s/it][A[A
+
+ 23%|██▎       | 7/30 [33:26<3:45:00, 586.97s/it][A[A
+
+ 27%|██▋       | 8/30 [33:39<2:28:10, 404.12s/it][A[A
+
+ 30%|███       | 9/30 [34:18<1:41:32, 290.13s/it][A[A
+
+ 33%|███▎      | 10/30 [34:24<1:07:25, 202.30s/it][A[A
+
+ 37%|███▋      | 11/30 [34:26<44:40, 141.10s/it]  [A[A
+
+ 40%|████      | 12/30 [34:30<29:45, 99.20s/it] [A[A
+
+ 43%|████▎     | 13/30 [34:36<20:07, 71.00s/it][A[A
+
+ 47%|████▋     | 14/30 [34:54<14:41, 55.11s/it][A[A
+
+ 50%|█████     | 15/30 [34:57<09:50, 39.36s/it][A[A
+
+ 53%|█████▎    | 16/30 [34:58<06:30, 27.90s/it][A[A
+
+ 57%|█████▋    | 17/30 [35:01<04:25, 20.44s/it][A[A
+
+ 60%|██████    | 18/30 [35:07<03:12, 16.05s/it][A[A
+
+ 63%|██████▎   | 19/30 [35:08<02:05, 11.40s/it][A[A
+
+ 67%|██████▋   | 20/30 [35:24<02:08, 12.81s/it][A[A
+
+ 70%|███████   | 21/30 [36:17<03:44, 24.97s/it][A[A
+
+ 73%|███████▎  | 22/30 [36:25<02:38, 19.78s/it][A[A
+
+ 77%|███████▋  | 23/30 [36:41<02:10, 18.64s/it][A[A
+
+ 80%|████████  | 24/30 [36:56<01:46, 17.72s/it][A[A
+
+ 83%|████████▎ | 25/30 [36:58<01:04, 13.00s/it][A[A
+
+ 87%|████████▋ | 26/30 [37:01<00:39,  9.90s/it][A[A
+
+ 93%|█████████▎| 28/30 [37:01<00:10,  5.43s/it][A[A
+
+100%|██████████| 30/30 [37:02<00:00,  3.31s/it][A[A100%|██████████| 30/30 [37:02<00:00, 74.07s/it]
+
+ 91%|█████████ | 10/11 [2:56:06<26:32, 1592.52s/it][A
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A
+
+  2%|▏         | 1/50 [00:03<02:28,  3.03s/it][A[A
+
+  4%|▍         | 2/50 [02:19<1:05:07, 81.41s/it][A[A
+
+  6%|▌         | 3/50 [03:30<1:00:12, 76.86s/it][A[A
+
+  8%|▊         | 4/50 [04:02<45:19, 59.13s/it]  [A[A
+
+ 10%|█         | 5/50 [04:06<29:19, 39.09s/it][A[A
+
+ 12%|█▏        | 6/50 [04:10<19:57, 27.21s/it][A[A
+
+ 14%|█▍        | 7/50 [04:49<22:18, 31.13s/it][A[A
+
+ 16%|█▌        | 8/50 [05:26<23:10, 33.11s/it][A[A
+
+ 18%|█▊        | 9/50 [06:07<24:13, 35.46s/it][A[A
+
+ 20%|██        | 10/50 [27:53<4:45:06, 427.66s/it][A[A
+
+ 22%|██▏       | 11/50 [33:04<4:14:49, 392.04s/it][A[A
+
+ 24%|██▍       | 12/50 [36:46<3:35:26, 340.16s/it][A[A
+
+ 26%|██▌       | 13/50 [47:38<4:28:03, 434.70s/it][A[A
+
+ 28%|██▊       | 14/50 [47:48<3:03:54, 306.52s/it][A[A
+
+ 30%|███       | 15/50 [49:04<2:18:16, 237.03s/it][A[A
+
+ 32%|███▏      | 16/50 [49:52<1:42:01, 180.04s/it][A[A
+
+ 34%|███▍      | 17/50 [50:07<1:11:40, 130.31s/it][A[A
+
+ 36%|███▌      | 18/50 [50:08<48:49, 91.54s/it]   [A[A
+
+ 38%|███▊      | 19/50 [50:19<34:48, 67.38s/it][A[A
+
+ 40%|████      | 20/50 [50:23<24:06, 48.21s/it][A[A
+
+ 42%|████▏     | 21/50 [50:26<16:44, 34.64s/it][A[A
+
+ 44%|████▍     | 22/50 [50:28<11:42, 25.09s/it][A[A
+
+ 46%|████▌     | 23/50 [50:30<08:03, 17.92s/it][A[A
+
+ 48%|████▊     | 24/50 [50:36<06:13, 14.38s/it][A[A
+
+ 50%|█████     | 25/50 [50:54<06:30, 15.62s/it][A[A
+
+ 52%|█████▏    | 26/50 [50:58<04:46, 11.92s/it][A[A
+
+ 54%|█████▍    | 27/50 [51:00<03:30,  9.15s/it][A[A
+
+ 58%|█████▊    | 29/50 [51:02<01:49,  5.24s/it][A[A
+
+ 60%|██████    | 30/50 [51:34<04:00, 12.04s/it][A[A
+
+ 62%|██████▏   | 31/50 [51:50<04:08, 13.08s/it][A[A
+
+ 64%|██████▍   | 32/50 [51:51<02:55,  9.75s/it][A[A
+
+ 66%|██████▌   | 33/50 [52:02<02:49,  9.97s/it][A[A
+
+ 68%|██████▊   | 34/50 [52:05<02:07,  7.98s/it][A[A
+
+ 70%|███████   | 35/50 [52:25<02:55, 11.72s/it][A[A
+
+ 72%|███████▏  | 36/50 [52:28<02:06,  9.04s/it][A[A
+
+ 74%|███████▍  | 37/50 [52:32<01:38,  7.60s/it][A[A
+
+ 76%|███████▌  | 38/50 [52:48<01:59,  9.98s/it][A[A
+
+ 78%|███████▊  | 39/50 [53:42<04:12, 22.98s/it][A[A
+
+ 80%|████████  | 40/50 [53:49<03:04, 18.46s/it][A[A
+
+ 82%|████████▏ | 41/50 [54:05<02:38, 17.62s/it][A[A
+
+ 84%|████████▍ | 42/50 [54:21<02:16, 17.09s/it][A[A
+
+ 86%|████████▌ | 43/50 [54:37<01:56, 16.69s/it][A[A
+
+ 88%|████████▊ | 44/50 [54:38<01:13, 12.25s/it][A[A
+
+ 90%|█████████ | 45/50 [54:41<00:46,  9.38s/it][A[A
+
+ 96%|█████████▌| 48/50 [54:42<00:08,  4.19s/it][A[A
+
+100%|██████████| 50/50 [54:42<00:00,  2.76s/it][A[A100%|██████████| 50/50 [54:42<00:00, 65.65s/it]
+
+100%|██████████| 11/11 [3:50:48<00:00, 2109.68s/it][A100%|██████████| 11/11 [3:50:48<00:00, 1258.98s/it]
+ 50%|█████     | 2/4 [9:19:29<9:02:13, 16266.79s/it] 
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A
+
+ 33%|███▎      | 1/3 [05:42<11:25, 342.68s/it][A[A
+
+ 67%|██████▋   | 2/3 [05:42<02:21, 141.28s/it][A[A
+
+100%|██████████| 3/3 [05:43<00:00, 77.03s/it] [A[A100%|██████████| 3/3 [05:43<00:00, 114.52s/it]
+
+  9%|▉         | 1/11 [05:43<57:15, 343.55s/it][A
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A
+
+ 20%|██        | 1/5 [00:06<00:26,  6.54s/it][A[A
+
+ 40%|████      | 2/5 [17:31<30:51, 617.30s/it][A[A
+
+ 60%|██████    | 3/5 [17:31<11:11, 335.59s/it][A[A
+
+ 80%|████████  | 4/5 [18:10<03:38, 218.22s/it][A[A
+
+100%|██████████| 5/5 [18:10<00:00, 139.72s/it][A[A100%|██████████| 5/5 [18:10<00:00, 218.11s/it]
+
+ 18%|█▊        | 2/11 [23:54<1:57:26, 782.97s/it][A
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A
+
+ 12%|█▎        | 1/8 [00:06<00:47,  6.78s/it][A[A
+
+ 25%|██▌       | 2/8 [17:30<1:01:39, 616.63s/it][A[A
+
+ 38%|███▊      | 3/8 [17:30<27:56, 335.22s/it]  [A[A
+
+ 50%|█████     | 4/8 [18:40<15:21, 230.27s/it][A[A
+
+ 62%|██████▎   | 5/8 [19:15<08:00, 160.09s/it][A[A
+
+ 75%|███████▌  | 6/8 [19:18<03:33, 106.62s/it][A[A
+
+ 88%|████████▊ | 7/8 [19:21<01:12, 72.83s/it] [A[A
+
+100%|██████████| 8/8 [19:22<00:00, 49.98s/it][A[A100%|██████████| 8/8 [19:22<00:00, 145.35s/it]
+
+ 27%|██▋       | 3/11 [43:16<2:07:31, 956.42s/it][A
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A
+
+ 11%|█         | 1/9 [00:06<00:53,  6.68s/it][A[A
+
+ 22%|██▏       | 2/9 [17:27<1:11:45, 615.06s/it][A[A
+
+ 33%|███▎      | 3/9 [17:27<33:26, 334.37s/it]  [A[A
+
+ 44%|████▍     | 4/9 [18:37<19:08, 229.76s/it][A[A
+
+ 56%|█████▌    | 5/9 [19:13<10:39, 159.88s/it][A[A
+
+ 67%|██████▋   | 6/9 [19:16<05:19, 106.66s/it][A[A
+
+ 78%|███████▊  | 7/9 [19:16<02:23, 71.84s/it] [A[A
+
+ 89%|████████▉ | 8/9 [19:20<00:50, 50.00s/it][A[A
+
+100%|██████████| 9/9 [19:21<00:00, 34.74s/it][A[A100%|██████████| 9/9 [19:21<00:00, 129.03s/it]
+
+ 36%|███▋      | 4/11 [1:02:38<2:01:00, 1037.28s/it][A
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A
+
+ 10%|█         | 1/10 [00:06<00:58,  6.55s/it][A[A
+
+ 20%|██        | 2/10 [17:27<1:22:00, 615.05s/it][A[A
+
+ 40%|████      | 4/10 [17:28<22:57, 229.60s/it]  [A[A
+
+ 50%|█████     | 5/10 [18:36<14:59, 179.88s/it][A[A
+
+ 60%|██████    | 6/10 [19:12<09:03, 135.75s/it][A[A
+
+ 70%|███████   | 7/10 [19:16<04:46, 95.44s/it] [A[A
+
+ 80%|████████  | 8/10 [19:16<02:13, 66.56s/it][A[A
+
+ 90%|█████████ | 9/10 [19:19<00:47, 47.46s/it][A[A
+
+100%|██████████| 10/10 [19:20<00:00, 33.47s/it][A[A100%|██████████| 10/10 [19:20<00:00, 116.07s/it]
+
+ 45%|████▌     | 5/11 [1:21:58<1:48:10, 1081.80s/it][A
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A
+
+  9%|▉         | 1/11 [00:06<01:05,  6.54s/it][A[A
+
+ 18%|█▊        | 2/11 [18:49<1:39:28, 663.18s/it][A[A
+
+ 27%|██▋       | 3/11 [23:44<1:06:00, 495.07s/it][A[A
+
+ 45%|████▌     | 5/11 [23:44<21:29, 214.96s/it]  [A[A
+
+ 55%|█████▍    | 6/11 [24:54<14:24, 173.00s/it][A[A
+
+ 64%|██████▎   | 7/11 [25:30<08:52, 133.05s/it][A[A
+
+ 73%|███████▎  | 8/11 [25:33<04:44, 94.88s/it] [A[A
+
+ 82%|████████▏ | 9/11 [25:33<02:13, 66.87s/it][A[A
+
+ 91%|█████████ | 10/11 [25:36<00:47, 47.98s/it][A[A
+
+100%|██████████| 11/11 [25:37<00:00, 34.00s/it][A[A100%|██████████| 11/11 [25:37<00:00, 139.79s/it]
+
+ 55%|█████▍    | 6/11 [1:47:36<1:43:04, 1236.81s/it][A
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A
+
+  8%|▊         | 1/12 [00:06<01:12,  6.55s/it][A[A
+
+ 17%|█▋        | 2/12 [18:49<1:50:30, 663.05s/it][A[A
+
+ 25%|██▌       | 3/12 [23:44<1:14:17, 495.24s/it][A[A
+
+ 42%|████▏     | 5/12 [23:45<25:05, 215.03s/it]  [A[A
+
+ 50%|█████     | 6/12 [25:00<17:28, 174.72s/it][A[A
+
+ 58%|█████▊    | 7/12 [25:36<11:11, 134.24s/it][A[A
+
+ 67%|██████▋   | 8/12 [25:39<06:23, 95.76s/it] [A[A
+
+ 75%|███████▌  | 9/12 [25:39<03:22, 67.49s/it][A[A
+
+ 83%|████████▎ | 10/12 [25:42<01:36, 48.41s/it][A[A
+
+ 92%|█████████▏| 11/12 [26:04<00:40, 40.44s/it][A[A
+
+100%|██████████| 12/12 [26:05<00:00, 28.55s/it][A[A100%|██████████| 12/12 [26:05<00:00, 130.42s/it]
+
+ 64%|██████▎   | 7/11 [2:13:41<1:29:36, 1344.14s/it][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A
+
+  7%|▋         | 1/15 [00:02<00:32,  2.34s/it][A[A
+
+ 13%|█▎        | 2/15 [00:09<01:07,  5.16s/it][A[A
+
+ 20%|██        | 3/15 [18:51<1:43:04, 515.35s/it][A[A
+
+ 27%|██▋       | 4/15 [23:47<1:18:33, 428.50s/it][A[A
+
+ 40%|████      | 6/15 [23:47<30:13, 201.50s/it]  [A[A
+
+ 47%|████▋     | 7/15 [24:57<22:01, 165.17s/it][A[A
+
+ 53%|█████▎    | 8/15 [25:32<15:01, 128.76s/it][A[A
+
+ 60%|██████    | 9/15 [25:36<09:16, 92.77s/it] [A[A
+
+ 67%|██████▋   | 10/15 [25:36<05:29, 65.84s/it][A[A
+
+ 73%|███████▎  | 11/15 [25:39<03:09, 47.47s/it][A[A
+
+ 80%|████████  | 12/15 [26:01<01:59, 39.83s/it][A[A
+
+ 87%|████████▋ | 13/15 [26:08<00:59, 29.98s/it][A[A
+
+ 93%|█████████▎| 14/15 [26:19<00:24, 24.47s/it][A[A
+
+100%|██████████| 15/15 [26:19<00:00, 17.28s/it][A[A100%|██████████| 15/15 [26:19<00:00, 105.32s/it]
+
+ 73%|███████▎  | 8/11 [2:40:01<1:10:57, 1419.18s/it][A
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A
+
+  5%|▌         | 1/20 [00:07<02:13,  7.04s/it][A[A
+
+ 10%|█         | 2/20 [00:13<02:00,  6.69s/it][A[A
+
+ 15%|█▌        | 3/20 [00:22<02:10,  7.70s/it][A[A
+
+ 20%|██        | 4/20 [00:42<03:19, 12.49s/it][A[A
+
+ 25%|██▌       | 5/20 [19:23<1:43:04, 412.32s/it][A[A
+
+ 30%|███       | 6/20 [24:18<1:26:55, 372.52s/it][A[A
+
+ 40%|████      | 8/20 [24:18<37:48, 189.01s/it]  [A[A
+
+ 45%|████▌     | 9/20 [24:19<25:39, 139.92s/it][A[A
+
+ 50%|█████     | 10/20 [25:28<20:07, 120.80s/it][A[A
+
+ 55%|█████▌    | 11/20 [26:19<15:10, 101.19s/it][A[A
+
+ 60%|██████    | 12/20 [26:24<09:51, 73.88s/it] [A[A
+
+ 65%|██████▌   | 13/20 [26:28<06:14, 53.51s/it][A[A
+
+ 70%|███████   | 14/20 [26:28<03:47, 37.90s/it][A[A
+
+ 75%|███████▌  | 15/20 [26:31<02:18, 27.70s/it][A[A
+
+ 80%|████████  | 16/20 [26:53<01:43, 25.91s/it][A[A
+
+ 85%|████████▌ | 17/20 [26:59<01:00, 20.13s/it][A[A
+
+ 90%|█████████ | 18/20 [27:11<00:35, 17.59s/it][A[A
+
+ 95%|█████████▌| 19/20 [27:31<00:18, 18.29s/it][A[A
+
+100%|██████████| 20/20 [27:31<00:00, 12.91s/it][A[A100%|██████████| 20/20 [27:31<00:00, 82.58s/it]
+
+ 82%|████████▏ | 9/11 [3:07:33<49:43, 1491.85s/it]  [A
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A
+
+  3%|▎         | 1/30 [00:07<03:24,  7.04s/it][A[A
+
+  7%|▋         | 2/30 [00:20<05:05, 10.93s/it][A[A
+
+ 10%|█         | 3/30 [00:22<02:58,  6.61s/it][A[A
+
+ 13%|█▎        | 4/30 [00:45<05:39, 13.06s/it][A[A
+
+ 17%|█▋        | 5/30 [00:45<03:31,  8.47s/it][A[A
+
+ 20%|██        | 6/30 [00:58<04:00, 10.00s/it][A[A
+
+ 23%|██▎       | 7/30 [01:39<07:41, 20.05s/it][A[A
+
+ 27%|██▋       | 8/30 [01:41<05:15, 14.34s/it][A[A
+
+ 30%|███       | 9/30 [08:31<48:22, 138.22s/it][A[A
+
+ 33%|███▎      | 10/30 [45:40<4:21:09, 783.47s/it][A[A
+
+ 37%|███▋      | 11/30 [55:27<3:49:02, 723.30s/it][A[A
+
+ 40%|████      | 12/30 [55:28<2:31:06, 503.68s/it][A[A
+
+ 47%|████▋     | 14/30 [55:28<1:11:52, 269.51s/it][A[A
+
+ 50%|█████     | 15/30 [55:29<50:36, 202.45s/it]  [A[A
+
+ 53%|█████▎    | 16/30 [57:24<41:53, 179.53s/it][A[A
+
+ 57%|█████▋    | 17/30 [57:42<29:20, 135.41s/it][A[A
+
+ 60%|██████    | 18/30 [58:33<22:20, 111.70s/it][A[A
+
+ 63%|██████▎   | 19/30 [58:38<14:53, 81.27s/it] [A[A
+
+ 67%|██████▋   | 20/30 [58:41<09:46, 58.67s/it][A[A
+
+ 70%|███████   | 21/30 [58:42<06:15, 41.73s/it][A[A
+
+ 77%|███████▋  | 23/30 [58:45<02:44, 23.48s/it][A[A
+
+ 80%|████████  | 24/30 [58:49<01:50, 18.48s/it][A[A
+
+ 83%|████████▎ | 25/30 [59:09<01:34, 18.98s/it][A[A
+
+ 87%|████████▋ | 26/30 [1:00:01<01:51, 27.85s/it][A[A
+
+ 90%|█████████ | 27/30 [1:00:02<01:00, 20.33s/it][A[A
+
+ 93%|█████████▎| 28/30 [1:00:12<00:35, 17.63s/it][A[A
+
+ 97%|█████████▋| 29/30 [1:00:33<00:18, 18.35s/it][A[A
+
+100%|██████████| 30/30 [1:00:33<00:00, 13.07s/it][A[A100%|██████████| 30/30 [1:00:33<00:00, 121.11s/it]
+
+ 91%|█████████ | 10/11 [4:08:06<35:52, 2152.97s/it][A
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A
+
+  2%|▏         | 1/50 [00:18<15:15, 18.69s/it][A[A
+
+  4%|▍         | 2/50 [00:21<07:38,  9.56s/it][A[A
+
+  6%|▌         | 3/50 [00:35<08:51, 11.30s/it][A[A
+
+  8%|▊         | 4/50 [00:36<05:29,  7.16s/it][A[A
+
+ 10%|█         | 5/50 [00:39<04:21,  5.81s/it][A[A
+
+ 12%|█▏        | 6/50 [01:02<08:33, 11.67s/it][A[A
+
+ 14%|█▍        | 7/50 [01:03<05:54,  8.24s/it][A[A
+
+ 16%|█▌        | 8/50 [01:04<04:08,  5.92s/it][A[A
+
+ 18%|█▊        | 9/50 [01:17<05:36,  8.20s/it][A[A
+
+ 20%|██        | 10/50 [01:58<12:08, 18.21s/it][A[A
+
+ 22%|██▏       | 11/50 [02:00<08:37, 13.28s/it][A[A
+
+ 24%|██▍       | 12/50 [08:51<1:25:01, 134.26s/it][A[A
+
+ 26%|██▌       | 13/50 [46:00<7:54:05, 768.79s/it][A[A
+
+ 28%|██▊       | 14/50 [50:38<6:12:15, 620.44s/it][A[A
+
+ 30%|███       | 15/50 [58:18<5:33:50, 572.31s/it][A[A
+
+ 32%|███▏      | 16/50 [58:22<3:47:16, 401.09s/it][A[A
+
+ 34%|███▍      | 17/50 [58:23<2:34:27, 280.84s/it][A[A
+
+ 38%|███▊      | 19/50 [58:23<1:18:04, 151.10s/it][A[A
+
+ 40%|████      | 20/50 [58:23<56:49, 113.64s/it]  [A[A
+
+ 42%|████▏     | 21/50 [58:24<40:35, 83.99s/it] [A[A
+
+ 44%|████▍     | 22/50 [1:00:19<43:14, 92.65s/it][A[A
+
+ 46%|████▌     | 23/50 [1:01:47<41:04, 91.27s/it][A[A
+
+ 48%|████▊     | 24/50 [1:01:59<29:43, 68.60s/it][A[A
+
+ 50%|█████     | 25/50 [1:02:16<22:21, 53.64s/it][A[A
+
+ 52%|█████▏    | 26/50 [1:02:42<18:13, 45.56s/it][A[A
+
+ 54%|█████▍    | 27/50 [1:03:27<17:26, 45.48s/it][A[A
+
+ 56%|█████▌    | 28/50 [1:03:30<11:58, 32.66s/it][A[A
+
+ 58%|█████▊    | 29/50 [1:03:34<08:29, 24.27s/it][A[A
+
+ 60%|██████    | 30/50 [1:03:36<05:53, 17.66s/it][A[A
+
+ 62%|██████▏   | 31/50 [1:03:40<04:18, 13.59s/it][A[A
+
+ 64%|██████▍   | 32/50 [1:03:41<02:55,  9.74s/it][A[A
+
+ 66%|██████▌   | 33/50 [1:03:42<02:01,  7.14s/it][A[A
+
+ 68%|██████▊   | 34/50 [1:03:48<01:49,  6.86s/it][A[A
+
+ 72%|███████▏  | 36/50 [1:03:50<00:58,  4.19s/it][A[A
+
+ 74%|███████▍  | 37/50 [1:03:52<00:46,  3.60s/it][A[A
+
+ 76%|███████▌  | 38/50 [1:03:55<00:41,  3.43s/it][A[A
+
+ 78%|███████▊  | 39/50 [1:04:11<01:16,  6.94s/it][A[A
+
+ 80%|████████  | 40/50 [1:04:25<01:27,  8.80s/it][A[A
+
+ 82%|████████▏ | 41/50 [1:05:17<03:09, 21.03s/it][A[A
+
+ 84%|████████▍ | 42/50 [1:05:25<02:19, 17.39s/it][A[A
+
+ 86%|████████▌ | 43/50 [1:05:30<01:35, 13.59s/it][A[A
+
+ 88%|████████▊ | 44/50 [1:05:41<01:18, 13.04s/it][A[A
+
+ 90%|█████████ | 45/50 [1:05:56<01:07, 13.47s/it][A[A
+
+ 92%|█████████▏| 46/50 [1:06:16<01:01, 15.44s/it][A[A
+
+ 94%|█████████▍| 47/50 [1:06:18<00:34, 11.57s/it][A[A
+
+ 96%|█████████▌| 48/50 [1:06:20<00:16,  8.49s/it][A[A
+
+ 98%|█████████▊| 49/50 [1:06:24<00:07,  7.28s/it][A[A
+
+100%|██████████| 50/50 [1:06:26<00:00,  5.69s/it][A[A100%|██████████| 50/50 [1:06:26<00:00, 79.73s/it]
+
+100%|██████████| 11/11 [5:14:33<00:00, 2714.14s/it][A100%|██████████| 11/11 [5:14:33<00:00, 1715.74s/it]
+ 75%|███████▌  | 3/4 [14:34:02<4:50:56, 17456.89s/it]
+  0%|          | 0/11 [00:00<?, ?it/s][A
+
+  0%|          | 0/3 [00:00<?, ?it/s][A[A
+
+ 67%|██████▋   | 2/3 [10:02<05:01, 301.03s/it][A[A
+
+100%|██████████| 3/3 [10:04<00:00, 176.80s/it][A[A100%|██████████| 3/3 [10:04<00:00, 201.64s/it]
+
+  9%|▉         | 1/11 [10:04<1:40:49, 604.93s/it][A
+
+  0%|          | 0/5 [00:00<?, ?it/s][A[A
+
+ 20%|██        | 1/5 [00:00<00:02,  1.88it/s][A[A
+
+ 40%|████      | 2/5 [00:00<00:00,  3.10it/s][A[A
+
+ 60%|██████    | 3/5 [10:03<09:10, 275.31s/it][A[A
+
+ 80%|████████  | 4/5 [11:12<03:14, 194.02s/it][A[A
+
+100%|██████████| 5/5 [11:16<00:00, 125.51s/it][A[A100%|██████████| 5/5 [11:16<00:00, 135.34s/it]
+
+ 18%|█▊        | 2/11 [21:21<1:37:04, 647.14s/it][A
+
+  0%|          | 0/8 [00:00<?, ?it/s][A[A
+
+ 12%|█▎        | 1/8 [00:00<00:03,  1.88it/s][A[A
+
+ 25%|██▌       | 2/8 [00:03<00:12,  2.09s/it][A[A
+
+ 38%|███▊      | 3/8 [00:06<00:10,  2.19s/it][A[A
+
+ 50%|█████     | 4/8 [00:08<00:08,  2.16s/it][A[A
+
+ 62%|██████▎   | 5/8 [10:10<10:55, 218.49s/it][A[A
+
+ 75%|███████▌  | 6/8 [11:19<05:35, 167.93s/it][A[A
+
+ 88%|████████▊ | 7/8 [11:43<02:00, 120.82s/it][A[A
+
+100%|██████████| 8/8 [11:50<00:00, 84.41s/it] [A[A100%|██████████| 8/8 [11:50<00:00, 88.78s/it]
+
+ 27%|██▋       | 3/11 [33:11<1:30:07, 675.96s/it][A
+
+  0%|          | 0/9 [00:00<?, ?it/s][A[A
+
+ 11%|█         | 1/9 [00:00<00:03,  2.39it/s][A[A
+
+ 22%|██▏       | 2/9 [00:03<00:14,  2.11s/it][A[A
+
+ 33%|███▎      | 3/9 [00:06<00:13,  2.21s/it][A[A
+
+ 44%|████▍     | 4/9 [00:08<00:10,  2.17s/it][A[A
+
+ 56%|█████▌    | 5/9 [27:18<39:17, 589.33s/it][A[A
+
+ 67%|██████▋   | 6/9 [27:19<19:27, 389.17s/it][A[A
+
+ 78%|███████▊  | 7/9 [28:28<09:29, 284.69s/it][A[A
+
+ 89%|████████▉ | 8/9 [28:52<03:21, 201.68s/it][A[A
+
+100%|██████████| 9/9 [28:59<00:00, 140.68s/it][A[A100%|██████████| 9/9 [28:59<00:00, 193.25s/it]
+
+ 36%|███▋      | 4/11 [1:02:11<2:07:50, 1095.74s/it][A
+
+  0%|          | 0/10 [00:00<?, ?it/s][A[A
+
+ 10%|█         | 1/10 [00:00<00:04,  1.81it/s][A[A
+
+ 30%|███       | 3/10 [00:03<00:09,  1.34s/it][A[A
+
+ 40%|████      | 4/10 [00:06<00:10,  1.67s/it][A[A
+
+ 50%|█████     | 5/10 [00:08<00:09,  1.82s/it][A[A
+
+ 60%|██████    | 6/10 [27:18<34:58, 524.56s/it][A[A
+
+ 70%|███████   | 7/10 [27:19<17:59, 359.86s/it][A[A
+
+ 80%|████████  | 8/10 [28:28<08:59, 269.75s/it][A[A
+
+ 90%|█████████ | 9/10 [28:52<03:14, 194.31s/it][A[A
+
+100%|██████████| 10/10 [28:59<00:00, 137.12s/it][A[A100%|██████████| 10/10 [28:59<00:00, 173.92s/it]
+
+ 45%|████▌     | 5/11 [1:31:10<2:12:46, 1327.77s/it][A
+
+  0%|          | 0/11 [00:00<?, ?it/s][A[A
+
+  9%|▉         | 1/11 [00:00<00:05,  1.86it/s][A[A
+
+ 27%|██▋       | 3/11 [00:03<00:11,  1.38s/it][A[A
+
+ 36%|███▋      | 4/11 [00:06<00:11,  1.66s/it][A[A
+
+ 45%|████▌     | 5/11 [00:08<00:10,  1.81s/it][A[A
+
+ 55%|█████▍    | 6/11 [27:19<43:43, 524.63s/it][A[A
+
+ 64%|██████▎   | 7/11 [27:19<23:59, 359.91s/it][A[A
+
+ 73%|███████▎  | 8/11 [28:28<13:29, 269.72s/it][A[A
+
+ 82%|████████▏ | 9/11 [28:52<06:28, 194.33s/it][A[A
+
+ 91%|█████████ | 10/11 [29:02<02:18, 138.08s/it][A[A
+
+100%|██████████| 11/11 [29:10<00:00, 98.56s/it] [A[A100%|██████████| 11/11 [29:10<00:00, 159.11s/it]
+
+ 55%|█████▍    | 6/11 [2:00:20<2:02:37, 1471.42s/it][A
+
+  0%|          | 0/12 [00:00<?, ?it/s][A[A
+
+  8%|▊         | 1/12 [00:00<00:04,  2.32it/s][A[A
+
+ 25%|██▌       | 3/12 [00:03<00:12,  1.35s/it][A[A
+
+ 33%|███▎      | 4/12 [00:05<00:13,  1.64s/it][A[A
+
+ 42%|████▏     | 5/12 [00:27<00:57,  8.28s/it][A[A
+
+ 50%|█████     | 6/12 [00:27<00:34,  5.67s/it][A[A
+
+ 58%|█████▊    | 7/12 [27:37<43:01, 516.23s/it][A[A
+
+ 67%|██████▋   | 8/12 [27:38<23:45, 356.45s/it][A[A
+
+ 75%|███████▌  | 9/12 [28:47<13:24, 268.28s/it][A[A
+
+ 83%|████████▎ | 10/12 [29:11<06:27, 193.82s/it][A[A
+
+ 92%|█████████▏| 11/12 [29:21<02:18, 138.03s/it][A[A
+
+100%|██████████| 12/12 [29:28<00:00, 98.62s/it] [A[A100%|██████████| 12/12 [29:28<00:00, 147.42s/it]
+
+ 64%|██████▎   | 7/11 [2:29:49<1:44:34, 1568.70s/it][A
+
+  0%|          | 0/15 [00:00<?, ?it/s][A[A
+
+  7%|▋         | 1/15 [00:00<00:06,  2.33it/s][A[A
+
+ 20%|██        | 3/15 [00:03<00:16,  1.34s/it][A[A
+
+ 33%|███▎      | 5/15 [00:07<00:15,  1.54s/it][A[A
+
+ 40%|████      | 6/15 [00:28<01:01,  6.88s/it][A[A
+
+ 47%|████▋     | 7/15 [00:28<00:40,  5.02s/it][A[A
+
+ 53%|█████▎    | 8/15 [27:36<54:17, 465.42s/it][A[A
+
+ 60%|██████    | 9/15 [27:57<33:42, 337.16s/it][A[A
+
+ 67%|██████▋   | 10/15 [27:57<19:54, 238.97s/it][A[A
+
+ 73%|███████▎  | 11/15 [29:07<12:36, 189.11s/it][A[A
+
+ 80%|████████  | 12/15 [29:31<07:00, 140.22s/it][A[A
+
+ 87%|████████▋ | 13/15 [29:41<03:23, 101.54s/it][A[A
+
+ 93%|█████████▎| 14/15 [30:09<01:19, 79.56s/it] [A[A
+
+100%|██████████| 15/15 [30:19<00:00, 58.88s/it][A[A100%|██████████| 15/15 [30:19<00:00, 121.29s/it]
+
+ 73%|███████▎  | 8/11 [3:00:08<1:22:25, 1648.49s/it][A
+
+  0%|          | 0/20 [00:00<?, ?it/s][A[A
+
+  5%|▌         | 1/20 [00:00<00:10,  1.82it/s][A[A
+
+ 10%|█         | 2/20 [00:00<00:05,  3.24it/s][A[A
+
+ 20%|██        | 4/20 [00:04<00:18,  1.16s/it][A[A
+
+ 30%|███       | 6/20 [00:07<00:19,  1.39s/it][A[A
+
+ 35%|███▌      | 7/20 [00:29<01:24,  6.53s/it][A[A
+
+ 40%|████      | 8/20 [00:30<01:02,  5.18s/it][A[A
+
+ 45%|████▌     | 9/20 [00:30<00:41,  3.80s/it][A[A
+
+ 50%|█████     | 10/20 [59:29<2:46:39, 999.90s/it][A[A
+
+ 55%|█████▌    | 11/20 [1:08:27<2:10:03, 867.11s/it][A[A
+
+ 60%|██████    | 12/20 [1:08:48<1:22:48, 621.10s/it][A[A
+
+ 65%|██████▌   | 13/20 [1:08:48<51:12, 438.93s/it]  [A[A
+
+ 70%|███████   | 14/20 [1:09:10<31:35, 315.84s/it][A[A
+
+ 75%|███████▌  | 15/20 [1:10:22<20:17, 243.44s/it][A[A
+
+ 80%|████████  | 16/20 [1:11:19<12:31, 187.81s/it][A[A
+
+ 85%|████████▌ | 17/20 [1:11:43<06:56, 138.91s/it][A[A
+
+ 90%|█████████ | 18/20 [1:11:52<03:20, 100.30s/it][A[A
+
+ 95%|█████████▌| 19/20 [1:12:20<01:18, 78.60s/it] [A[A
+
+100%|██████████| 20/20 [1:12:31<00:00, 58.15s/it][A[A100%|██████████| 20/20 [1:12:31<00:00, 217.55s/it]
+
+ 82%|████████▏ | 9/11 [4:12:39<1:23:06, 2493.35s/it][A
+
+  0%|          | 0/30 [00:00<?, ?it/s][A[A
+
+  3%|▎         | 1/30 [00:00<00:15,  1.85it/s][A[A
+
+  7%|▋         | 2/30 [00:00<00:08,  3.29it/s][A[A
+
+ 13%|█▎        | 4/30 [00:00<00:05,  4.80it/s][A[A
+
+ 17%|█▋        | 5/30 [00:04<00:28,  1.13s/it][A[A
+
+ 23%|██▎       | 7/30 [00:07<00:32,  1.40s/it][A[A
+
+ 27%|██▋       | 8/30 [00:29<02:21,  6.45s/it][A[A
+
+ 30%|███       | 9/30 [00:33<02:06,  6.01s/it][A[A
+
+ 33%|███▎      | 10/30 [00:35<01:33,  4.69s/it][A[A
+
+ 37%|███▋      | 11/30 [00:37<01:14,  3.91s/it][A[A
+
+ 40%|████      | 12/30 [00:37<00:52,  2.91s/it][A[A
+
+ 43%|████▎     | 13/30 [59:29<4:51:15, 1028.00s/it][A[A
+
+ 47%|████▋     | 14/30 [1:03:27<3:32:22, 796.40s/it][A[A
+
+ 50%|█████     | 15/30 [1:09:53<2:48:46, 675.07s/it][A[A
+
+ 53%|█████▎    | 16/30 [1:10:13<1:52:13, 480.95s/it][A[A
+
+ 57%|█████▋    | 17/30 [1:10:14<1:13:14, 338.06s/it][A[A
+
+ 60%|██████    | 18/30 [1:10:15<47:27, 237.33s/it]  [A[A
+
+ 63%|██████▎   | 19/30 [1:11:07<33:21, 181.97s/it][A[A
+
+ 67%|██████▋   | 20/30 [1:11:12<21:32, 129.21s/it][A[A
+
+ 70%|███████   | 21/30 [1:12:24<16:48, 112.09s/it][A[A
+
+ 73%|███████▎  | 22/30 [1:12:39<11:02, 82.86s/it] [A[A
+
+ 77%|███████▋  | 23/30 [1:13:45<09:04, 77.86s/it][A[A
+
+ 80%|████████  | 24/30 [1:14:26<06:40, 66.71s/it][A[A
+
+ 83%|████████▎ | 25/30 [1:14:31<04:01, 48.25s/it][A[A
+
+ 87%|████████▋ | 26/30 [1:14:48<02:35, 38.76s/it][A[A
+
+ 90%|█████████ | 27/30 [1:14:49<01:22, 27.60s/it][A[A
+
+ 93%|█████████▎| 28/30 [1:15:17<00:55, 27.65s/it][A[A
+
+ 97%|█████████▋| 29/30 [1:15:23<00:21, 21.07s/it][A[A
+
+100%|██████████| 30/30 [1:15:35<00:00, 18.41s/it][A[A100%|██████████| 30/30 [1:15:35<00:00, 151.18s/it]
+
+ 91%|█████████ | 10/11 [5:28:15<52:03, 3123.75s/it] [A
+
+  0%|          | 0/50 [00:00<?, ?it/s][A[A
+
+  2%|▏         | 1/50 [00:00<00:25,  1.90it/s][A[A
+
+  4%|▍         | 2/50 [00:00<00:18,  2.64it/s][A[A
+
+  6%|▌         | 3/50 [00:00<00:12,  3.72it/s][A[A
+
+ 10%|█         | 5/50 [00:01<00:09,  5.00it/s][A[A
+
+ 12%|█▏        | 6/50 [00:03<00:31,  1.41it/s][A[A
+
+ 14%|█▍        | 7/50 [00:05<00:50,  1.18s/it][A[A
+
+ 16%|█▌        | 8/50 [00:05<00:36,  1.15it/s][A[A
+
+ 20%|██        | 10/50 [00:08<00:40,  1.01s/it][A[A
+
+ 22%|██▏       | 11/50 [00:10<00:51,  1.33s/it][A[A
+
+ 24%|██▍       | 12/50 [00:14<01:17,  2.05s/it][A[A
+
+ 26%|██▌       | 13/50 [00:27<03:07,  5.06s/it][A[A
+
+ 28%|██▊       | 14/50 [00:43<04:51,  8.09s/it][A[A
+
+ 30%|███       | 15/50 [00:48<04:09,  7.14s/it][A[A
+
+ 32%|███▏      | 16/50 [00:49<03:05,  5.45s/it][A[A
+
+ 34%|███▍      | 17/50 [00:51<02:24,  4.37s/it][A[A
+
+ 36%|███▌      | 18/50 [01:14<05:19, 10.00s/it][A[A
+
+ 38%|███▊      | 19/50 [01:20<04:28,  8.66s/it][A[A
+
+ 40%|████      | 20/50 [01:20<03:04,  6.16s/it][A[A
+
+ 42%|████▏     | 21/50 [1:00:21<8:32:20, 1060.01s/it][A[A
+
+ 44%|████▍     | 22/50 [1:04:18<6:19:58, 814.21s/it] [A[A
+
+ 46%|████▌     | 23/50 [1:04:23<4:17:26, 572.08s/it][A[A
+
+ 48%|████▊     | 24/50 [1:11:34<3:49:39, 530.00s/it][A[A
+
+ 50%|█████     | 25/50 [1:11:58<2:37:42, 378.51s/it][A[A
+
+ 52%|█████▏    | 26/50 [1:12:15<1:47:59, 269.97s/it][A[A
+
+ 54%|█████▍    | 27/50 [1:12:22<1:13:20, 191.31s/it][A[A
+
+ 56%|█████▌    | 28/50 [1:12:23<49:11, 134.17s/it]  [A[A
+
+ 58%|█████▊    | 29/50 [1:12:26<33:11, 94.84s/it] [A[A
+
+ 60%|██████    | 30/50 [1:12:28<22:17, 66.86s/it][A[A
+
+ 62%|██████▏   | 31/50 [1:13:02<18:04, 57.06s/it][A[A
+
+ 64%|██████▍   | 32/50 [1:13:54<16:40, 55.59s/it][A[A
+
+ 66%|██████▌   | 33/50 [1:14:00<11:30, 40.62s/it][A[A
+
+ 68%|██████▊   | 34/50 [1:15:12<13:21, 50.08s/it][A[A
+
+ 70%|███████   | 35/50 [1:15:27<09:52, 39.49s/it][A[A
+
+ 72%|███████▏  | 36/50 [1:15:29<06:38, 28.50s/it][A[A
+
+ 74%|███████▍  | 37/50 [1:17:07<10:39, 49.19s/it][A[A
+
+ 76%|███████▌  | 38/50 [1:17:48<09:19, 46.62s/it][A[A
+
+ 78%|███████▊  | 39/50 [1:17:50<06:07, 33.37s/it][A[A
+
+ 80%|████████  | 40/50 [1:17:53<04:03, 24.34s/it][A[A
+
+ 82%|████████▏ | 41/50 [1:18:10<03:18, 22.05s/it][A[A
+
+ 84%|████████▍ | 42/50 [1:18:11<02:04, 15.62s/it][A[A
+
+ 86%|████████▌ | 43/50 [1:18:13<01:20, 11.52s/it][A[A
+
+ 88%|████████▊ | 44/50 [1:18:14<00:50,  8.41s/it][A[A
+
+ 90%|█████████ | 45/50 [1:18:35<01:00, 12.13s/it][A[A
+
+ 92%|█████████▏| 46/50 [1:18:48<00:50, 12.64s/it][A[A
+
+ 94%|█████████▍| 47/50 [1:18:54<00:31, 10.62s/it][A[A
+
+ 96%|█████████▌| 48/50 [1:19:08<00:22, 11.46s/it][A[A
+
+ 98%|█████████▊| 49/50 [1:19:46<00:19, 19.64s/it][A[A
+
+100%|██████████| 50/50 [1:20:01<00:00, 18.06s/it][A[A100%|██████████| 50/50 [1:20:01<00:00, 96.03s/it]
+
+100%|██████████| 11/11 [6:48:16<00:00, 3637.15s/it][A100%|██████████| 11/11 [6:48:16<00:00, 2226.96s/it]
+100%|██████████| 4/4 [21:22:19<00:00, 20236.06s/it]  100%|██████████| 4/4 [21:22:19<00:00, 19234.88s/it]
+
+=========== SAVING (step 8/8)
